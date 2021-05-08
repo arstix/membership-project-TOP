@@ -1,0 +1,149 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    background-color: #e8f48c;
+    background: #e8f48c;
+    color: white;
+    padding: 20px;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  background-color: white;
+}
+
+.messageBody {
+  justify-content: center;
+  text-align: center;
+  border: 3px solid red;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 30px 40px 40px 40px;
+  color: white;
+  background-color: red;
+}
+
+.messageBody:hover {
+  transform: scale(1.05);
+}
+
+.memberArea {
+  text-align: left;
+  margin-left: 110px;
+}
+
+.buttonMessage {
+  margin-left:50px;
+}
+
+.btn {
+  color: white !important;
+  margin-top: 10px;
+}
+
+.btn-primary{
+  margin-left: 50px !important;
+}
+
+.anonymous {
+  font-size: 20px;
+}
+
+.alreadyMember {
+  margin-top: 300px;
+  text-align: center;
+  border: 2px solid black;
+  padding: -20px;
+  color: white;
+  background-color: black;
+  border-radius: 20px;
+}
+
+.alreadyMember:hover {
+  transform: scale(1.1);
+}
+
+.createMessage {
+  margin-left: 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.createMessage > button {
+  text-align: center;
+}
+
+.headerOne {
+  text-align: center;
+}
+
+.titleMessage {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-left: -130px;
+}
+.messageMessage {
+  height: 300px;
+  width: 800px;
+  display: block;
+}
+
+.textMessage {
+    margin-left: -130px;
+}
+
+.btn-success {
+  margin-top: 30px;
+  margin-left: 24px;
+}
+
+.loginMessage {
+  margin-left: 45%;
+}
+
+.signupMember {
+  margin-left: 45%;
+}
+
+.usernameMessage {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  margin-left: -20px;
+}
+
+.passwordMessage {
+  margin-bottom: 30px;
+    margin-left: -20px;
+}
+
+.loginMessage > input {
+  margin-left: 200px;
+}
+
+.btn-secondary {
+  margin-bottom: 15px;
+}
+
+.registerMember {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.passwordMember {
+  margin-bottom: 30px;
+}
+
+.usernameField {
+  border-radius: 10px;
+  outline: none;
+}
+
+.passwordField {
+  border-radius: 10px;
+  outline: none;
+}

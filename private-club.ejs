@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<div class="alreadyMember">
+<% if (currentUser && currentUser.isMember) {%>
+
+  <h1><%= currentUser.username %> You are already a member!</h1>
+</div>
+
+<% }  else { %>
+  <h1>Join our Private Club to see exclusive messages!</h1>
+  <form action="/private-club" method="POST">
+    <label for="password">Password</label>
+    <input name="secret" type="password" />
+    <button>Join</button>
+  </form>
+<%}%>
+<body>
+</body>
+</html>

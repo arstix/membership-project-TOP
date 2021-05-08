@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1 #{title}
+
+
+
+    form(method='POST' action='/delete/' + message._id)
+      div.form-group
+        input#authorid.form-control(type='hidden',name='bookid', required='true', value= )
+
+      button.btn.btn-primary(type='submit') Delete

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+</head>
+
+  <% if (currentUser) {%>
+      <div class="header">
+
+    <h1>Welcome Back <%= currentUser.username %></h1>
+  <a href="/private-club"><button class="btn btn-info">Private club</button></a>
+  <a href="/admin"><button class="btn btn-info">Enter as admin</button></a>
+    <a href="/log-out"><button class="btn btn-danger">Log out</button></a>
+
+</div>
+  <a href="/create-message"><button class="btn btn-primary" type="button">Create message</button></a>
+    <% messages.forEach(function(messages){ %>
+      <div class="messageBody">
+<h1> <%= messages.title %> %> </h1>
+    <%= messages.message %> %>
+  <p>Author: <%= messages.author %> %> </p>
+  <% if (currentUser.isAdmin) {%>
+          <button class="btn btn-danger">Delete</button>
+    <%}%>
+    %>
+</div>
+    <% });
+  }  else { %>
+
+    <div class="header">
+    <h1>Messages App</h1>
+  <a href="/login"><button class="btn btn-info">Login</button></a>
+  <a href="/sign-up"><button class="btn btn-info">Sign Up</button></a>
+  <a href="/admin"><button class="btn btn-info">Enter as admin</button></a>
+</div>
+    <% messages.forEach(function(messages){ %>
+      <div class="messageBody">
+<h1> <%= messages.title %> %> </h1>
+  <%= messages.message %> %>
+  <h3 class="anonymous">Please sign up to see the author!</h3>
+</div>
+<% }); %>
+
+  <%}%>
+    <% if (currentUser && currentUser.isMember) {%>
+      <div class="memberArea">
+              <h1>Member Messages</h1>
+      </div>
+      <div class="messageBody">
+      <h1>This is a members message</h1>
+      <p>
+        You can only see this if you are a member
+      </p>
+      <p>
+        Private Leader
+      </p>
+</div>
+
+    <%}%>
+  %>
+</body>
+</html>
